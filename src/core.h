@@ -1,5 +1,5 @@
 /* lcdemu - emulator of Matrix Orbital(R) lcd displays
-   Copyright (C) 1999 Piotr Esden-Tempski
+   Copyright (C) 1999-2002 Piotr Esden-Tempski
 
     This program is free software; you can redistribute it and/or modify
     it under the terms of the GNU General Public License as published by
@@ -16,8 +16,25 @@
     Foundation, Inc., 59 Temple Place, Suite 330, Boston, MA  02111-1307  USA
 */
 
-extern int zut_width;
-extern int zut_height; 
+#ifndef CORE_H
+#define CORE_H
 
-extern int lcd_width;
-extern int lcd_height; 
+extern int backlight;
+extern int new_char_bits[8];
+extern int new_char_nr;
+
+void core_init();
+
+void core_destroy_display();
+
+void core_reset_display();
+
+void core_redraw();
+
+void core_handle_input(unsigned char ch);
+
+void core_handle_command(unsigned char ch);
+
+void core_draw_char(unsigned char ch);
+
+#endif

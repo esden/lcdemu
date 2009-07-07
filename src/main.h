@@ -1,5 +1,5 @@
 /* lcdemu - emulator of Matrix Orbital(R) lcd displays
-   Copyright (C) 1999 Piotr Esden-Tempski
+   Copyright (C) 1999-2002 Piotr Esden-Tempski
 
     This program is free software; you can redistribute it and/or modify
     it under the terms of the GNU General Public License as published by
@@ -16,21 +16,9 @@
     Foundation, Inc., 59 Temple Place, Suite 330, Boston, MA  02111-1307  USA
 */
 
-#include "out.h"
+#ifndef MAIN_H
+#define MAIN_H
 
-void init_out(void)
-{
-  picture=malloc(zut_width*zut_height*3);
-  if(picture == NULL)
-  {
-    mess(LCD_ERR, "Could not allocate buffer.\n");
-  }
-  rst();
-}
+extern GtkWidget *lcdemu_window;
 
-void disp(void)
-{
-   /* Pass picture data to zut */
-  fwrite(picture,zut_width*3,zut_height,stdout);
-  fflush(stdout);
-}
+#endif

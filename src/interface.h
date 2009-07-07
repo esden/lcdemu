@@ -1,5 +1,5 @@
 /* lcdemu - emulator of Matrix Orbital(R) lcd displays
-   Copyright (C) 1999 Piotr Esden-Tempski
+   Copyright (C) 1999-2002 Piotr Esden-Tempski
 
     This program is free software; you can redistribute it and/or modify
     it under the terms of the GNU General Public License as published by
@@ -16,9 +16,11 @@
     Foundation, Inc., 59 Temple Place, Suite 330, Boston, MA  02111-1307  USA
 */
 
-#include "includes.h"
-#include "defines.h"
+#ifndef INTERFACE_H
+#define INTERFACE_H
 
-extern void exit_prog(void);
+extern GtkWidget *drawing_area;
 
-void mess(int mess_kind, char *txt);
+GtkWidget* create_lcdemu_window(void);
+
+#endif

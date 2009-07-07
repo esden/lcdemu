@@ -1,3 +1,12 @@
+v0.5 --> v0.6
+-------------
+ * rewritten once more from scratch
+ * now you do not need zut anymore
+ * support for scrolling
+
+  -- Piotr Esden-Tempski <pe1724@bingo-ev.de>
+
+
 v0.4.2 --> v0.5
 ---------------
  * rewritten from scrach

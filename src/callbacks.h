@@ -1,5 +1,5 @@
 /* lcdemu - emulator of Matrix Orbital(R) lcd displays
-   Copyright (C) 1999 Piotr Esden-Tempski
+   Copyright (C) 1999-2002 Piotr Esden-Tempski
 
     This program is free software; you can redistribute it and/or modify
     it under the terms of the GNU General Public License as published by
@@ -16,17 +16,22 @@
     Foundation, Inc., 59 Temple Place, Suite 330, Boston, MA  02111-1307  USA
 */
 
-#include "close_emu.h"
+#ifndef CALLBACKS_H
+#define CALLBACKS_H
 
-void close_emu(void)
-{
-  fprintf(stderr, "\n\nTHIS MUST NOT BE REACHED\n\n");
-  exit_prog();
-}
+#include "gtk/gtk.h"
 
-void exit_prog(void)
-{
-  fprintf(stderr, "Quitting...\n");
-  close_in(); 
-  exit(0);
-}
+extern GdkPixmap *backing_pixmap;
+
+/* Create a new backing pixmap of the appropriate size */
+gint configure_event( GtkWidget *widget, GdkEventConfigure *event );
+/* Redraw the screen from the backing pixmap */
+gint expose_event( GtkWidget *widget, GdkEventExpose *event );
+/* close program */
+void quit ();
+/* handle incoming data */
+void data_in(gpointer foo, gint source, GdkInputCondition condition);
+/* uups eof on the input fifo */
+void data_destroy(gpointer foo);
+
+#endif

@@ -1,6 +1,0 @@
-TODO
-----
-
-* write more documentation
-* implement all missing functions of the emulator
-* use char instead of `unsigned int'

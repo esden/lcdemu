@@ -1,3 +1,0 @@
-#!/bin/sh
-gcc test_lcd.c -o test_lcd
-./test_lcd > /dev/lcd

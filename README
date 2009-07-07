@@ -23,17 +23,31 @@ NEWS
 Read ChangeLog for the latest news.
 
 
-REQUIREMENTS
-------------
-
- zut: get it from http://www.math.mcgill.ca/~loisel/zut/zut.html
- lcdproc: get it from http://lcdproc.omnipotent.net/download.php3
-
 COMPILING AND INSTALLING
 ------------------------
 
-See INSTALL.
+See INSTALL for general information.
 
+Here a small help:
+
+# ./configure
+# make
+# su -c "mkfifo /dev/lcd; chmod 666 /dev/lcd; make install"
+
+
+RUNNING
+-------
+
+After the install (see the section above) you only have to start lcdemu 
+
+# lcdemu
+
+after that you can start a client. For example lcdproc that uses /dev/lcd to
+communicate with the display.
+
+# LCDd
+
+Easy ha ?
 
 FURTHER INFO
 ------------

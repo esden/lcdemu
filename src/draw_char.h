@@ -1,5 +1,5 @@
 /* lcdemu - emulator of Matrix Orbital(R) lcd displays
-   Copyright (C) 1999 Piotr Esden-Tempski
+   Copyright (C) 1999-2002 Piotr Esden-Tempski
 
     This program is free software; you can redistribute it and/or modify
     it under the terms of the GNU General Public License as published by
@@ -16,17 +16,17 @@
     Foundation, Inc., 59 Temple Place, Suite 330, Boston, MA  02111-1307  USA
 */
 
-#include "init_emu.h"
+#ifndef CHAR_DRAW_H
+#define CHAR_DRAW_H
 
-void init_emu(void)
-{
-  /*fprintf(stderr, "init_emu\n");*/
+void init_chars( void );
+void init_bg( void );
 
-  signal(SIGINT, exit_prog);
+void draw_char(unsigned char ch, int x, int y);
+void draw_bg();
 
-  init_chars();
-  init_in();
-  init_out();
+void add_char();
 
-  welcome();
-}
+void reset_display();
+
+#endif
