@@ -1,0 +1,26 @@
+HOW TO INSTALL lcdemu
+---------------------
+
+1) Unpack the archive
+   tar xfvz lcdemu-0.5.tar.gz
+   or
+   tar xfvI lcdemu-0.5.tar.bz2
+
+2) cd lcdemu-0.5
+
+3) edit the Makefile. Maybe you want to change DEVICE (default is /dev/lcd)
+
+4) make
+
+5) make install
+
+
+HOW TO START lcdemu
+-------------------
+
+1) Start lcdproc
+   lcdproc -l MtxOrb 
+
+2) Start lcdemu
+   lcdemu & 
+   (use lcdemu --help for more information)

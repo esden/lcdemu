@@ -1,0 +1,44 @@
+lcdemu README
+-------------
+
+WHAT IS lcdemu
+--------------
+
+Lcdemu is a Mat*ix O*bital character display emulator. It was created to
+allow people to see how the orginal is looking like when it works. The further
+goal is to make it behave like the original but with the addition of lots of
+debugging options. And the last reason to create lcdemu was that people that 
+only have a laptop but like gadgets like lcdproc can use them.
+
+LICENSE
+-------
+
+lcdemu is covered by the GNU General Public Licence (GPL).
+See COPYING for details.
+
+
+NEWS
+----
+
+Read ChangeLog for the latest news.
+
+
+REQUIREMENTS
+------------
+
+ zut: get it from http://www.math.mcgill.ca/~loisel/zut/zut.html
+ lcdproc: get it from http://lcdproc.omnipotent.net/download.php3
+
+COMPILING AND INSTALLING
+------------------------
+
+See INSTALL.
+
+
+FURTHER INFO
+------------
+
+You can always get the newest version of lcdemu and more information from
+http://www.bingo-ev.de/~pe1724/lcdemu.html.
+
+

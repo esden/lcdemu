@@ -1,0 +1,4 @@
+#!/bin/sh
+LCDd -d MtxOrb
+lcdemu -d /dev/lcd &
+lcdproc &

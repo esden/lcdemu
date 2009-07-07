@@ -1,0 +1,61 @@
+v0.4.2 --> v0.5
+---------------
+ * rewritten from scrach
+ * a lot of structural changes
+ * device can be chosen through command line option -d or --device
+ * contrast is now also implemented with peset 128
+ * update of MANIFEST
+
+  -- Piotr Esden-Tempski <pe1724@bingo-ev.de>
+
+ * small changes in Makefile, MANIFEST, README, INSTALL
+ * 'beautified' parts of the code, removed some obsolete parts
+ * improved the 'make install' option of the Makefile
+ * added the standard-header to test_lcd.c
+ * changed many functions that don't take arguments from xxxx() to xxxx(void);
+ * added --help and --version commandline-option
+ * I have written some code to allow syslog-logging
+ * a few smaller changes
+
+  -- Uwe Hermann <uh1763@bingo-ev.de>
+
+
+v0.4.1 --> v0.4.2
+-----------------
+
+ * improved the 'make archive' and 'make bzarchive' option of the Makefile
+ * minor fixes
+ * some changes in README 
+
+  -- Uwe Hermann <uh1763@bingo-ev.de>
+
+
+v0.4.0 --> v0.4.1
+-----------------
+
+ * added AUTHORS, COPYING, ChangeLog, MANIFEST, README, TODO
+ * wrote a Makefile
+ * changed lots of code to make lcdemu compile on an ANSI c-compiler
+ * changed the name of the executable to lcdemu.prog and added a script
+   called lcdemu that users will execute
+ * changed some stuff in INSTALL
+ * changed the name of the package from lcdemu.0.4 to lcdemu-0.4.1
+   and the name "lcd" to "lcdemu" in all files that have the short
+   GPL-paragraph in them
+ * a few smaller changes, not worth mentioning
+ * added "#include <unistd.h>" to lcd.c. This is needed for read().
+ * if(!picture) -----> if(picture == NULL)
+ * removed log.gcc
+
+  -- Uwe Hermann <uh1763@bingo-ev.de>
+
+
+v0.4
+----
+
+ * first public release at http://www.bingo-ev.de/pe1724/lcdemu.html
+
+v0.1 --> v0.3
+-------------
+ * not released
+

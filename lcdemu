@@ -1,0 +1,2 @@
+#!/bin/sh
+lcdemu.prog $1 $2 | zut -b 121 37

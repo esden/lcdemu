@@ -1,0 +1,4 @@
+#!/bin/sh
+killall -INT lcdproc
+killall -INT LCDd
+killall -INT lcdemu.prog
